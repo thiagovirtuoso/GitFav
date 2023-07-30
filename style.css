@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: 'Roboto', sans-serif;
+    --background-color: #000;
+    --text-color-white: #FFF;
+    --text-color-primary: #E1E1E6;
+    --text-color-secondary: #F75A68;
+    --text-color-terciary: #065E7C;
+    --text-color-quaternary: #4E5455;
+    --placeholder-color: #7C7C8A;
+    --thead-background-color: #092D38;
+    --tr-odd-color: rgba(6, 22, 27, 0.50);
+    --tr-even-color: #06181C;
+    --tr-even-border-color: #4A808C;
+    --button-background-color: #065E7C;
+    --button-hover-background-color: #FFFFFF;
+}
+
+body {
+    font-size: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.hide {
+    display: none;
+}
+
+#app {
+    max-width: 112rem;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    margin-top: 11.5rem;
+    margin-bottom: 8.7rem;
+}
+
+.logo {
+    padding-right: 29.3rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search input {
+    display: flex;
+    width: 46.2rem;
+    background-color: #06181C;
+    border: none;
+    border-radius: .5rem;
+    padding: 1.6rem;
+    align-items: center;
+    align-self: stretch;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    color: var(--text-color-primary);
+}
+
+.search input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.search button {
+    display: flex;
+    width: 17rem;
+    align-items: center;
+    color: var(--text-color-white);
+    background-color: var(--button-background-color);
+    border: none;
+    border-radius: .5rem;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+.search button:hover, .search button:hover svg path {
+    background-color: var(--button-hover-background-color);
+    color: var(--text-color-terciary);
+    fill: var(--button-background-color);
+}
+
+table * {
+    font-size: 2rem;
+    color: var(--text-color-primary);
+}
+
+table {
+    width: 112rem;
+    height: 68.8rem;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1rem;
+    border: .1rem solid var(--tr-even-border-color);
+    overflow: hidden;
+}
+
+table thead {
+    background: var(--thead-background-color);
+}
+
+table thead tr {
+    display: block;
+}
+
+table th {
+    padding: 1.6rem 2.4rem 1.6rem 4.0rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    text-align: left;
+}
+
+table th:first-child {
+    width: 50.4rem;
+}
+
+table th {
+    width: 22rem;
+}
+
+table th:last-child {
+    width: 17.8rem;
+}
+
+table tbody {
+    display: block;
+    height: 62.4rem;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+table tbody tr {
+    max-height: 10.4rem;
+    background-color: var(--tr-odd-color);
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: var(--tr-even-color);
+    border: .1rem solid var(--tr-even-border-color);
+    border-right: none;
+    border-left: none;
+}
+
+table td {
+    height: 10.4rem;
+    padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+table td:last-child {
+    width: 17.8rem;
+}
+.user {
+    width: 50.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.user img {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+}
+
+.user a {
+    text-decoration: none;
+}
+
+.user p {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.user span {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.repositories, .followers {
+    width: 22rem;
+}
+
+.remove {
+    border: none;
+    background: none;
+    color: var(--text-color-secondary);
+    cursor: pointer;
+}
+
+.no-favorites tbody {
+    display: flex;
+    background-color: var(--tr-odd-color);
+    overflow: hidden;
+}
+
+.no-favorites tbody tr {
+    background: none;
+    margin: 21rem 23.1rem 28.9rem 19.2rem;
+}
+
+.no-favorites tbody td {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 6rem;
+    padding: 0;
+}
+
+.no-favorites img {
+    width: 13.2rem;
+    height: 13.2rem;
+}
+
+.no-favorites p {
+    width: max-content;
+    color: var(--text-color-quaternary);
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+tbody::-webkit-scrollbar{
+    width: .6rem;
+    background: transparent;
+} 
+  
+tbody::-webkit-scrollbar-thumb{
+    width: .6rem;
+    border-radius: 1rem;
+    background: #4A808C;
+  
+}
