@@ -120,7 +120,7 @@ table * {
 
 table {
     width: 112rem;
-    height: 68.8rem;
+    max-height: 68.8rem;
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
@@ -159,7 +159,7 @@ table th:last-child {
 
 table tbody {
     display: block;
-    height: 62.4rem;
+    max-height: 62.4rem;
     width: 100%;
     overflow-y: scroll;
 }
